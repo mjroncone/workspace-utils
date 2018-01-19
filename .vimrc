@@ -10,6 +10,23 @@ set number
 " Enable JSX syntax highlighting in js files
 let g:jsx_ext_required = 0
 
+" Disable line scrolling in insert mode
+set mouse=a
+
+" Disable scroll moving the 'viewport'
+noremap <ScrollWheelUp> <nop>
+noremap <S-ScrollWheelUp> <nop>
+noremap <C-ScrollWheelUp> <nop>
+noremap <ScrollWheelDown> <nop>
+noremap <S-ScrollWheelDown> <nop>
+noremap <C-ScrollWheelDown> <nop>
+noremap <ScrollWheelLeft> <nop>
+noremap <S-ScrollWheelLeft> <nop>
+noremap <C-ScrollWheelLeft> <nop>
+noremap <ScrollWheelRight> <nop>
+noremap <S-ScrollWheelRight> <nop>
+noremap <C-ScrollWheelRight> <nop>
+
 " Begin vim-plug setup
 call plug#begin('~/.vim/plugged')
 
