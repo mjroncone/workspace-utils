@@ -4,6 +4,9 @@ syntax on
 " Set tabs to 2 spaces
 set expandtab tabstop=2 shiftwidth=2
 
+" Show line numbers
+set number
+
 " Enable JSX syntax highlighting in js files
 let g:jsx_ext_required = 0
 
