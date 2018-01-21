@@ -27,6 +27,9 @@ noremap <ScrollWheelRight> <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
+" Run mix formatter on save
+let g:mix_format_on_save = 1
+
 " Ensure vim-plug and plugs installed on start
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -37,9 +40,15 @@ endif
 " Begin vim-plug setup
 call plug#begin('~/.vim/plugged')
 
-Plug 'elixir-editors/vim-elixir'
+" Interacting with filesystem
 Plug 'scrooloose/nerdtree'
+
+"Javascript specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
+"Elixir specific
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 
 call plug#end()
