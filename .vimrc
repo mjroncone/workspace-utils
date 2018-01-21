@@ -1,5 +1,6 @@
 " Enable syntax highlighting
 syntax on
+set background=dark
 
 " Set tabs to 2 spaces
 set expandtab tabstop=2 shiftwidth=2
