@@ -4,8 +4,14 @@ syntax on
 " Set tabs to 2 spaces
 set expandtab tabstop=2 shiftwidth=2
 
+" Display whitespace
+set list listchars=tab:».,trail:-,nbsp:·
+
 " Show line numbers
 set number
+
+" Show the cursor *all* the time
+set ruler
 
 " Enable JSX syntax highlighting in js files
 let g:jsx_ext_required = 0
