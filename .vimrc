@@ -64,6 +64,8 @@ Plug 'mxw/vim-jsx'
 
 " Ruby specific
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'ngmy/vim-rubocop'
+Plug 'tpope/vim-endwise'
 
 " Elixir specific
 Plug 'elixir-editors/vim-elixir'
@@ -71,9 +73,6 @@ Plug 'mhinz/vim-mix-format'
 
 " Preview Markdown Files
 Plug 'jamshedvesuna/vim-markdown-preview'
-
-" Code quality tools
-Plug 'ngmy/vim-rubocop'
 
 call plug#end()
 
