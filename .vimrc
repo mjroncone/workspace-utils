@@ -8,6 +8,11 @@ set expandtab tabstop=2 shiftwidth=2
 " Display whitespace
 set list listchars=tab:».,trail:-,nbsp:·
 
+" Italics
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 " Show line numbers
 set number
 
@@ -57,6 +62,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" Ruby specific
+Plug 'patstockwell/vim-monokai-tasty'
+
 " Elixir specific
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
@@ -64,4 +72,10 @@ Plug 'mhinz/vim-mix-format'
 " Preview Markdown Files
 Plug 'jamshedvesuna/vim-markdown-preview'
 
+" Code quality tools
+Plug 'ngmy/vim-rubocop'
+
 call plug#end()
+
+" Set ruby syntax highlight scheme
+colorscheme vim-monokai-tasty
