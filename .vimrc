@@ -39,6 +39,12 @@ noremap <ScrollWheelRight> <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
+" Rspec.vim key mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 " Run mix formatter on save
 let g:mix_format_on_save = 1
 
@@ -66,6 +72,7 @@ Plug 'mxw/vim-jsx'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'ngmy/vim-rubocop'
 Plug 'tpope/vim-endwise'
+Plug 'thoughtbot/vim-rspec'
 
 " Elixir specific
 Plug 'elixir-editors/vim-elixir'
