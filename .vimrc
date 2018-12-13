@@ -20,6 +20,10 @@ set number
 set ruler
 set splitright
 
+" autocompletion to match bash
+set wildmode=longest,list
+set wildmenu
+
 " Enable JSX syntax highlighting in js files
 let g:jsx_ext_required = 0
 
