@@ -1,6 +1,5 @@
 " Enable syntax highlighting
 syntax on
-set background=dark
 
 " Set tabs to 2 spaces
 set expandtab tabstop=2 shiftwidth=2
@@ -23,6 +22,11 @@ set splitright
 " autocompletion to match bash
 set wildmode=longest,list
 set wildmenu
+
+" Yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed
+endif
 
 " Enable JSX syntax highlighting in js files
 let g:jsx_ext_required = 0
@@ -89,4 +93,5 @@ Plug 'jamshedvesuna/vim-markdown-preview'
 call plug#end()
 
 " Set ruby syntax highlight scheme
+let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
