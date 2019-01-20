@@ -83,6 +83,10 @@ Plug 'ngmy/vim-rubocop'
 Plug 'tpope/vim-endwise'
 Plug 'thoughtbot/vim-rspec'
 
+" Python specific
+Plug 'vim-python/python-syntax'
+Plug 'ambv/black'
+
 " Elixir specific
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
@@ -91,6 +95,10 @@ Plug 'mhinz/vim-mix-format'
 Plug 'jamshedvesuna/vim-markdown-preview'
 
 call plug#end()
+
+let g:python_highlight_all=1
+" Runs black autoformatter for python files on save
+autocmd BufWritePre *.py execute ':Black'
 
 " Set ruby syntax highlight scheme
 let g:vim_monokai_tasty_italic = 1
