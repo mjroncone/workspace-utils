@@ -54,9 +54,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Run mix formatter on save
-let g:mix_format_on_save = 1
-
 " Enable Github flavored markdown previews
 let vim_markdown_preview_github = 1
 
@@ -74,6 +71,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 
 " Javascript specific
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
@@ -95,6 +93,12 @@ Plug 'mhinz/vim-mix-format'
 Plug 'jamshedvesuna/vim-markdown-preview'
 
 call plug#end()
+
+" Run mix formatter on save
+let g:mix_format_on_save = 1
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
 
 let g:python_highlight_all=1
 " Runs black autoformatter for python files on save
