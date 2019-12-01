@@ -89,6 +89,9 @@ Plug 'ambv/black'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 
+" Golang specific
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Preview Markdown Files
 Plug 'jamshedvesuna/vim-markdown-preview'
 
