@@ -69,6 +69,7 @@ call plug#begin('~/.vim/plugged')
 
 " Interacting with filesystem
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Javascript specific
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
