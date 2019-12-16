@@ -81,7 +81,6 @@ Plug 'prettier/vim-prettier', {
 
 " Ruby specific
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'ngmy/vim-rubocop'
 Plug 'tpope/vim-endwise'
 Plug 'thoughtbot/vim-rspec'
 
@@ -114,5 +113,4 @@ colorscheme vim-monokai-tasty
 
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
-autocmd BufWritePre *.rb execute ':Rubocop -a'
 autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
