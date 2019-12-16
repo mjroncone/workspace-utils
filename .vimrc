@@ -72,7 +72,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Javascript specific
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 " note that node/npm/yarn must already be installed for this
@@ -106,7 +105,6 @@ call plug#end()
 let g:mix_format_on_save = 1
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
 
 let g:python_highlight_all=1
 
@@ -117,4 +115,4 @@ colorscheme vim-monokai-tasty
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
 autocmd BufWritePre *.rb execute ':Rubocop -a'
-autocmd BufWritePre *.js, *.jsx execute ':Prettier'
+autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
