@@ -76,6 +76,10 @@ Plug 'scrooloose/nerdtree'
 " Javascript specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+" note that node/npm/yarn must already be installed for this
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Ruby specific
 Plug 'patstockwell/vim-monokai-tasty'
@@ -97,9 +101,12 @@ Plug 'jamshedvesuna/vim-markdown-preview'
 call plug#end()
 
 let g:python_highlight_all=1
-" Runs black autoformatter for python files on save
-autocmd BufWritePre *.py execute ':Black'
 
 " Set ruby syntax highlight scheme
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
+
+" On-save commands
+autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.rb execute ':Rubocop -a'
+autocmd BufWritePre *.js, *.jsx execute ':Prettier'
