@@ -76,6 +76,10 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" Typescript specific
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+
 " Ruby specific
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'ngmy/vim-rubocop'
