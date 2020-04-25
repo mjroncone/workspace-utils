@@ -25,7 +25,7 @@ set wildmenu
 
 " Yank to clipboard
 if has("clipboard")
-  set clipboard=unnamed
+  set clipboard=unnamedplus
 endif
 
 " Enable JSX syntax highlighting in js files
