@@ -100,6 +100,9 @@ Plug 'mhinz/vim-mix-format'
 " Golang specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Rust specific
+Plug 'rust-lang/rust.vim'
+
 " Preview Markdown Files
 Plug 'jamshedvesuna/vim-markdown-preview'
 
