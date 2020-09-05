@@ -119,6 +119,9 @@ let g:python_highlight_all=1
 let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
+" Rust autoformat on save
+let g:rustfmt_autosave = 1
+
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
 autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
