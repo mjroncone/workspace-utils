@@ -72,13 +72,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+" Async Lint Engine
+Plug 'dense-analysis/ale'
+
 " Javascript specific
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-" note that node/npm/yarn must already be installed for this
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Typescript specific
 Plug 'leafgarland/typescript-vim'
@@ -111,9 +110,12 @@ call plug#end()
 " Run mix formatter on save
 let g:mix_format_on_save = 1
 
-let g:prettier#autoformat = 0
-
 let g:python_highlight_all=1
+
+" ESLint format on save
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fix_on_save = 1
 
 " Set ruby syntax highlight scheme
 let g:vim_monokai_tasty_italic = 1
@@ -124,4 +126,3 @@ let g:rustfmt_autosave = 1
 
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
-autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.vue,*.yaml,*.html execute ':Prettier'
