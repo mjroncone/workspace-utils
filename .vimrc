@@ -102,6 +102,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Rust specific
 Plug 'rust-lang/rust.vim'
 
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+
 " Preview Markdown Files
 Plug 'jamshedvesuna/vim-markdown-preview'
 
@@ -123,6 +126,11 @@ colorscheme vim-monokai-tasty
 
 " Rust autoformat on save
 let g:rustfmt_autosave = 1
+
+" Dart
+let g:dart_format_on_save = 1
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
 
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
