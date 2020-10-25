@@ -116,8 +116,7 @@ let g:mix_format_on_save = 1
 let g:python_highlight_all=1
 
 " ESLint format on save
-let g:ale_fixers = {}
-let g:ale_fixers.javascript = ['eslint']
+let g:ale_fixers = ['eslint']
 let g:ale_fix_on_save = 1
 
 " Set ruby syntax highlight scheme
