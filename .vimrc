@@ -133,3 +133,6 @@ let g:dart_style_guide = 2
 
 " On-save commands
 autocmd BufWritePre *.py execute ':Black'
+
+" Typescript compile on save
+autocmd BufWritePost *.ts :silent !npx tsc
